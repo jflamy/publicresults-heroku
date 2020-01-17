@@ -15,9 +15,9 @@ import ch.qos.logback.classic.Logger;
 /**
  * Main.
  */
-public class Publisher {
+public class PublicResults {
 
-    public final static Logger logger = (Logger) LoggerFactory.getLogger(Publisher.class);
+    public final static Logger logger = (Logger) LoggerFactory.getLogger(PublicResults.class);
 
     private static Integer serverPort;
 

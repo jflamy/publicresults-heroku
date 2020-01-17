@@ -65,7 +65,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <mainClass>publish.Main</mainClass>
+                    <mainClass>PublicResults</mainClass>
                 </configuration>
             </plugin>
 
@@ -75,8 +75,8 @@
     <dependencies>
         <dependency>
             <groupId>app.owlcms</groupId>
-            <artifactId>public</artifactId>
-            <version>4.3.3.0</version>
+            <artifactId>publicresults</artifactId>
+            <version>4.4.0</version>
             <type>jar</type>
         </dependency>
     </dependencies>
