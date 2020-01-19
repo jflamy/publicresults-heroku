@@ -76,7 +76,7 @@
         <dependency>
             <groupId>app.owlcms</groupId>
             <artifactId>publicresults</artifactId>
-            <version>4.4.0.4</version>
+            <version>4.4.0.5</version>
             <type>jar</type>
         </dependency>
     </dependencies>
