@@ -1,11 +1,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-<!--     <parent> -->
-<!--         <groupId>app.owlcms</groupId> -->
-<!--         <artifactId>owlcms4top</artifactId> -->
-<!--         <version>4.4.0.11</version> -->
-<!--     </parent> -->
+    <!-- <parent> -->
+    <!-- <groupId>app.owlcms</groupId> -->
+    <!-- <artifactId>owlcms4top</artifactId> -->
+    <!-- <version>4.4.0.11</version> -->
+    <!-- </parent> -->
 
     <name>OWLCMS Cloud Public Results Publisher</name>
     <groupId>app.owlcms</groupId>
@@ -44,9 +44,8 @@
             </plugins>
         </pluginManagement>
         <plugins>
-            <-- shading is necessary because Heroku does not pull in the dependencies
-                (.m2 is not accessible at run time -->
             <plugin>
+                <!-- shading is necessary because Heroku does not pull in the dependencies (.m2 is not accessible at run time) -->
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
                 <version>3.2.1</version>
