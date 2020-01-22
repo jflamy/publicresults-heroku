@@ -10,7 +10,7 @@
     <name>OWLCMS Cloud Public Results Publisher</name>
     <groupId>app.owlcms</groupId>
     <artifactId>owlcms-publicresults</artifactId>
-    <version>4.4.0.26</version>
+    <version>4.4.0.27</version>
 
     <properties>
         <!-- maven configs -->
