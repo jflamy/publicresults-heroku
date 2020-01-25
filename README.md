@@ -1,4 +1,4 @@
-## OWLCMS Public Results Relay (Prerelease Repository)
+## OWLCMS Public Results Relay
 
 This application is meant to be installed on the cloud, to allow people anywhere on internet to see results from a competition.  
 
