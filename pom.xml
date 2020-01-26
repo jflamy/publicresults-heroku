@@ -1,16 +1,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <!-- <parent> -->
-    <!-- <groupId>app.owlcms</groupId> -->
-    <!-- <artifactId>owlcms4top</artifactId> -->
-    <!-- <version>4.4.0.11</version> -->
-    <!-- </parent> -->
 
     <name>OWLCMS Cloud Public Results Publisher</name>
     <groupId>app.owlcms</groupId>
     <artifactId>owlcms-publicresults</artifactId>
-    <version>4.4.1-alpha2</version>
+    <version>4.4.1-alpha3</version>
 
     <properties>
         <!-- maven configs -->
@@ -28,6 +23,16 @@
             </snapshots>
         </repository>
     </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>bintray-owlcms-owlcms-maven</id>
+            <url>https://dl.bintray.com/owlcms/owlcms-maven</url>
+            <name>bintray-plugins</name>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
 
     <build>
         <pluginManagement>
@@ -77,8 +82,7 @@
                 </configuration>
             </plugin>
             <plugin>
-                <!-- Only used in production, but cannot be removed or moved to production profile because of the way it is invoked by the 
-                    gitflow plugin -->
+                <!-- Skip execution - top level project does all the release handling -->
                 <groupId>com.ragedunicorn.tools.maven</groupId>
                 <artifactId>github-release-maven-plugin</artifactId>
                 <version>1.0.4.2</version>
@@ -88,19 +92,6 @@
                         <id>default-cli</id>
                         <configuration>
                             <skip>true</skip>
-                            <!-- all other parameters are fake -->
-                            <owner>jflamy</owner>
-                            <repository>owlcms4</repository>
-                            <server>github-oauth</server>
-                            <tagName>${project.version}</tagName>
-                            <name>${project.version}</name>
-                            <targetCommitish>master</targetCommitish>
-                            <body>${project.version}</body>
-                            <releaseNotes>ReleaseNotes.md</releaseNotes>
-                            <assets>
-                                <!-- <asset>owlcms/target/owlcms.zip</asset> -->
-                                <!-- <asset>owlcms/target/owlcms_setup/owlcms_setup.exe</asset> -->
-                            </assets>
                         </configuration>
                     </execution>
                 </executions>
