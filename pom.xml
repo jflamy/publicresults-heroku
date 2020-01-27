@@ -14,7 +14,7 @@
 
     <scm>
         <connection>scm:git:https://github.com/jflamy/owlcms-publicresults.git</connection>
-      <tag>4.4.1-beta2</tag>
+      <tag>HEAD</tag>
   </scm>
 
     <repositories>
