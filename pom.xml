@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <name>OWLCMS Cloud Public Results Publisher</name>
@@ -87,6 +88,23 @@
                 </configuration>
             </plugin>
             <plugin>
+                <groupId>com.amashchenko.maven.plugin</groupId>
+                <artifactId>gitflow-maven-plugin</artifactId>
+                <version>1.14.0</version>
+                <configuration>
+                    <gitFlowConfig>
+                        <productionBranch>develop</productionBranch>
+                        <developmentBranch>develop</developmentBranch>
+                    </gitFlowConfig>
+                    <allowSnapshots>true</allowSnapshots>
+                    <skipTag>true</skipTag>
+                    <skipTestProject>true</skipTestProject>
+                    <commitDevelopmentVersionAtStart>false</commitDevelopmentVersionAtStart>
+                    <verbose>true</verbose>
+                    <skipUpdateVersion>true</skipUpdateVersion>
+                </configuration>
+            </plugin>
+            <plugin>
                 <!-- Skip execution - top level project does all the release handling -->
                 <groupId>com.ragedunicorn.tools.maven</groupId>
                 <artifactId>github-release-maven-plugin</artifactId>
@@ -97,24 +115,6 @@
                         <id>default-cli</id>
                         <configuration>
                             <skip>true</skip>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-release-plugin</artifactId>
-                <version>3.0.0-M1</version>
-                <executions>
-                    <execution>
-                        <id>default-cli</id>
-                        <configuration>
-                            <branchName>${project.version}</branchName>
-                            <localCheckout>true</localCheckout>
-                            <updateBranchVersions>false</updateBranchVersions>
-                            <updateDependencies>false</updateDependencies>
-                            <updateVersionsToSnapshot>false</updateVersionsToSnapshot>
-                            <updateWorkingCopyVersions>false</updateWorkingCopyVersions>
                         </configuration>
                     </execution>
                 </executions>
