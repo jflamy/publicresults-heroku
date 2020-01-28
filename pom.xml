@@ -86,24 +86,6 @@
                     <mainClass>PublicResults</mainClass>
                 </configuration>
             </plugin>
-            
-            <plugin>
-                <groupId>com.amashchenko.maven.plugin</groupId>
-                <artifactId>gitflow-maven-plugin</artifactId>
-                <version>1.14.0</version>
-                <configuration>
-                    <gitFlowConfig>
-                        <productionBranch>develop</productionBranch>
-                        <developmentBranch>develop</developmentBranch>
-                    </gitFlowConfig>
-                    <allowSnapshots>true</allowSnapshots>
-                    <skipTag>true</skipTag>
-                    <skipTestProject>true</skipTestProject>
-                    <commitDevelopmentVersionAtStart>false</commitDevelopmentVersionAtStart>
-                    <verbose>true</verbose>
-                    <skipUpdateVersion>true</skipUpdateVersion>
-                </configuration>
-            </plugin>
             <plugin>
                 <!-- Skip execution - top level project does all the release handling -->
                 <groupId>com.ragedunicorn.tools.maven</groupId>
