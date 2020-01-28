@@ -97,6 +97,7 @@
                         <productionBranch>develop</productionBranch>
                         <developmentBranch>develop</developmentBranch>
                     </gitFlowConfig>
+                    <fetchRemote>false</fetchRemote>
                     <allowSnapshots>true</allowSnapshots>
                     <skipTag>true</skipTag>
                     <skipTestProject>true</skipTestProject>
