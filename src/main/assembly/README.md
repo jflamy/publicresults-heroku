@@ -1,4 +1,4 @@
-## OWLCMS Public Results Relay
+## OWLCMS Public Results Relay ${project.version}
 
 This application is meant to be installed on the cloud, to allow people anywhere on internet to see results from a competition.  
 
