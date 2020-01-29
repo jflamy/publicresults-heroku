@@ -5,17 +5,23 @@
     <name>OWLCMS Cloud Public Results Publisher</name>
     <groupId>app.owlcms</groupId>
     <artifactId>owlcms-publicresults</artifactId>
-    <version>4.4.1</version>
+    <version>4.4.1-beta11</version>
 
     <properties>
         <!-- maven configs -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <branch>${project.version}</branch>
     </properties>
+
+    <scm>
+        <connection>scm:git:https://github.com/jflamy/owlcms-publicresults.git</connection>
+        <tag>HEAD</tag>
+    </scm>
 
     <repositories>
         <repository>
-            <id>bintray-owlcms-owlcms-maven</id>
+            <id>bintray-owlcms-maven</id>
             <url>https://dl.bintray.com/owlcms/owlcms-maven</url>
             <name>bintray</name>
             <snapshots>
@@ -25,7 +31,7 @@
     </repositories>
     <pluginRepositories>
         <pluginRepository>
-            <id>bintray-owlcms-owlcms-maven</id>
+            <id>bintray-owlcms-maven</id>
             <url>https://dl.bintray.com/owlcms/owlcms-maven</url>
             <name>bintray-plugins</name>
             <snapshots>
@@ -33,7 +39,6 @@
             </snapshots>
         </pluginRepository>
     </pluginRepositories>
-
     <build>
         <pluginManagement>
             <plugins>
@@ -49,6 +54,24 @@
             </plugins>
         </pluginManagement>
         <plugins>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>plain</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                        <configuration>
+                            <finalName>${project.artifactId}</finalName>
+                            <descriptors>
+                                <descriptor>src/main/assembly/plain.xml</descriptor>
+                            </descriptors>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
             <plugin>
                 <!-- shading is necessary because Heroku does not pull in the dependencies (.m2 is not accessible at run time) -->
                 <groupId>org.apache.maven.plugins</groupId>
