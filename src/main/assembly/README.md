@@ -6,5 +6,5 @@ This program receives updates from the [OWLCMS](https://jflamy.github.io/owlcms4
 
 To install: click on this button.  You will be prompted to create a (free) account on the Heroku cloud if you do not have one already.  [Full instructions](https://jflamy-dev.github.io/owlcms4-prerelease/#/Remote) for how to connect your competition site OWLCMS to the cloud relay are available [here](https://jflamy-dev.github.io/owlcms4-prerelease/#/Remote).
 
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/jflamy/owlcms-publicresults)
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/${env.REPO_OWNER}/${env.P_REPO_NAME})
 

@@ -52,7 +52,7 @@
       <snapshots>
         <enabled>false</enabled>
       </snapshots>
-      <id>bintray-owlcms-owlcms-maven</id>
+      <id>bintray-owlcms-maven</id>
       <name>bintray</name>
       <url>https://dl.bintray.com/owlcms/owlcms-maven</url>
     </repository>

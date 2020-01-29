@@ -21,7 +21,7 @@
 
     <repositories>
         <repository>
-            <id>bintray-owlcms-owlcms-maven</id>
+            <id>bintray-owlcms-maven</id>
             <url>https://dl.bintray.com/owlcms/owlcms-maven</url>
             <name>bintray</name>
             <snapshots>
@@ -31,7 +31,7 @@
     </repositories>
     <pluginRepositories>
         <pluginRepository>
-            <id>bintray-owlcms-owlcms-maven</id>
+            <id>bintray-owlcms-maven</id>
             <url>https://dl.bintray.com/owlcms/owlcms-maven</url>
             <name>bintray-plugins</name>
             <snapshots>
@@ -54,6 +54,24 @@
             </plugins>
         </pluginManagement>
         <plugins>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>plain</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                        <configuration>
+                            <finalName>${project.artifactId}</finalName>
+                            <descriptors>
+                                <descriptor>src/main/assembly/plain.xml</descriptor>
+                            </descriptors>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
             <plugin>
                 <!-- shading is necessary because Heroku does not pull in the dependencies (.m2 is not accessible at run time) -->
                 <groupId>org.apache.maven.plugins</groupId>
