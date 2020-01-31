@@ -116,18 +116,37 @@
                 </configuration>
             </plugin>
             <plugin>
-                <!-- Skip execution - top level project does all the release handling -->
                 <groupId>com.ragedunicorn.tools.maven</groupId>
                 <artifactId>github-release-maven-plugin</artifactId>
                 <version>1.0.4.2</version>
                 <inherited>false</inherited>
                 <executions>
                     <execution>
+                        <!-- Skip default execution from top-level -->
                         <id>default-cli</id>
                         <configuration>
                             <skip>true</skip>
                         </configuration>
                     </execution>
+                    <execution>
+                        <!-- our specific execution -->
+                        <id>release-cli</id>
+                        <configuration>
+                            <owner>${github.owner}</owner>
+                            <repository>${github.repository}</repository>
+                            <server>${github.token}</server>
+                            <tagName>${project.version}</tagName>
+                            <name>${project.version}</name>
+                            <targetCommitish>master</targetCommitish>
+                            <body>${project.version}</body>
+                            <releaseNotes>ReleaseNotes.md</releaseNotes>
+                            <prerelease>${github.prerelease}</prerelease>
+                            <assets>
+<!--                                 <asset>owlcms/target/owlcms_setup/owlcms_setup.exe</asset> -->
+<!--                                 <asset>owlcms/target/owlcms.zip</asset> -->
+                            </assets>
+                        </configuration>
+                    </execution>                    
                 </executions>
             </plugin>
         </plugins>
