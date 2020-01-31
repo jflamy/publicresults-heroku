@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>publicresults-deploy</name>
+	<name>publicresults-heroku</name>
 	<comment></comment>
 	<projects>
 	</projects>

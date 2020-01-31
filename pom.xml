@@ -10,8 +10,8 @@
 
     <name>OWLCMS Cloud Public Results Publisher</name>
     <groupId>app.owlcms</groupId>
-    <artifactId>owlcms-publicresults</artifactId>
-    <version>4.4.2-beta13</version>
+    <artifactId>publicresults-heroku</artifactId>
+    <version>4.4.2-rc2</version>
 
     <properties>
         <!-- maven configs -->
@@ -21,7 +21,7 @@
     </properties>
 
     <scm>
-        <connection>scm:git:https://github.com/jflamy/owlcms-publicresults.git</connection>
+        <connection>scm:git:https://github.com/jflamy/publicresults-heroku.git</connection>
         <tag>HEAD</tag>
     </scm>
 
