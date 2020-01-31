@@ -1,11 +1,17 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+<!--  we do not use parent because we don't want a dependency on owlcms4top -->
+<!--     <parent> -->
+<!--         <groupId>app.owlcms</groupId> -->
+<!--         <artifactId>owlcms4top</artifactId> -->
+<!--         <version>4.4.2-beta2</version> -->
+<!--     </parent> -->
 
     <name>OWLCMS Cloud Public Results Publisher</name>
     <groupId>app.owlcms</groupId>
     <artifactId>owlcms-publicresults</artifactId>
-    <version>4.4.2-beta2</version>
+    <version>4.4.2-beta4</version>
 
     <properties>
         <!-- maven configs -->
@@ -55,19 +61,24 @@
         </pluginManagement>
         <plugins>
             <plugin>
-                <artifactId>maven-assembly-plugin</artifactId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>3.1.0</version>
                 <executions>
                     <execution>
-                        <id>plain</id>
+                        <id>copy-resources</id>
                         <phase>package</phase>
                         <goals>
-                            <goal>single</goal>
+                            <goal>copy-resources</goal>
                         </goals>
                         <configuration>
-                            <finalName>${project.artifactId}</finalName>
-                            <descriptors>
-                                <descriptor>src/main/assembly/plain.xml</descriptor>
-                            </descriptors>
+                            <outputDirectory>${basedir}</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>src/main/markdown</directory>
+                                    <exclude>.*</exclude>
+                                    <filtering>true</filtering>
+                                </resource>
+                            </resources>
                         </configuration>
                     </execution>
                 </executions>
@@ -105,20 +116,40 @@
                 </configuration>
             </plugin>
             <plugin>
-                <!-- Skip execution - top level project does all the release handling -->
                 <groupId>com.ragedunicorn.tools.maven</groupId>
                 <artifactId>github-release-maven-plugin</artifactId>
                 <version>1.0.4.2</version>
                 <inherited>false</inherited>
                 <executions>
                     <execution>
+                        <!-- Skip default execution from top-level -->
                         <id>default-cli</id>
                         <configuration>
                             <skip>true</skip>
                         </configuration>
                     </execution>
+                    <execution>
+                        <!-- our specific execution -->
+                        <id>release-cli</id>
+                        <configuration>
+                            <owner>${github.owner}</owner>
+                            <repository>${github.repository}</repository>
+                            <server>${github.token}</server>
+                            <tagName>${project.version}</tagName>
+                            <name>${project.version}</name>
+                            <targetCommitish>master</targetCommitish>
+                            <body>${project.version}</body>
+                            <releaseNotes>ReleaseNotes.md</releaseNotes>
+                            <prerelease>${github.prerelease}</prerelease>
+                            <assets>
+<!--                                 <asset>owlcms/target/owlcms_setup/owlcms_setup.exe</asset> -->
+<!--                                 <asset>owlcms/target/owlcms.zip</asset> -->
+                            </assets>
+                        </configuration>
+                    </execution>                    
                 </executions>
             </plugin>
+            
         </plugins>
     </build>
 
