@@ -11,7 +11,7 @@
     <name>OWLCMS Cloud Public Results Publisher</name>
     <groupId>app.owlcms</groupId>
     <artifactId>publicresults-heroku</artifactId>
-    <version>4.4.2-beta7</version>
+    <version>4.4.2-beta8</version>
 
     <properties>
         <!-- maven configs -->
