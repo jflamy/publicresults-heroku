@@ -2,7 +2,6 @@
   "name": "OWLCMS Results Publisher",
   "description": "This application relays scoreboard and leaderboard information from a competition site to the web",
   "repository": "https://github.com/jflamy/owlcms-publisher", 
-  "image": "heroku/java",
   "buildpacks": [ 
     {
       "url": "https://github.com/SriniNa/Java_pack"
