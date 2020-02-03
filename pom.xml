@@ -18,13 +18,7 @@
         <!-- maven configs -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <branch>${project.version}</branch>
     </properties>
-
-    <scm>
-        <connection>scm:git:https://github.com/jflamy/publicresults-heroku.git</connection>
-        <tag>HEAD</tag>
-    </scm>
 
     <build>
         <plugins>
