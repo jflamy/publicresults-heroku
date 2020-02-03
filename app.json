@@ -10,5 +10,7 @@
     {
       "url": "https://github.com/weibeld/heroku-buildpack-run"
     }
-  ]
+  ],
+  "addons": ["heroku-postgresql:hobby-dev"]
 }
+
