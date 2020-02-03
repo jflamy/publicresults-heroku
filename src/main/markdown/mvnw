@@ -1,3 +1,0 @@
-#!/bin/sh -x
-mkdir target
-curl -L "https://dl.bintray.com/owlcms/owlcms-maven/app/owlcms/publicresults/${project.version}/publicresults-${project.version}.jar" -o target/publicresults.jar

@@ -46,19 +46,6 @@
         </pluginRepository>
     </pluginRepositories>
     <build>
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-compiler-plugin</artifactId>
-                    <version>3.8.1</version>
-                    <configuration>
-                        <source>1.8</source>
-                        <target>1.8</target>
-                    </configuration>
-                </plugin>
-            </plugins>
-        </pluginManagement>
         <plugins>
             <plugin>
                 <artifactId>maven-resources-plugin</artifactId>
@@ -82,38 +69,6 @@
                         </configuration>
                     </execution>
                 </executions>
-            </plugin>
-            <plugin>
-                <!-- shading is necessary because Heroku does not pull in the dependencies (.m2 is not accessible at run time) -->
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-shade-plugin</artifactId>
-                <version>3.2.1</version>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>shade</goal>
-                        </goals>
-                        <configuration>
-                            <createDependencyReducedPom>false</createDependencyReducedPom>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>exec-maven-plugin</artifactId>
-                <version>1.6.0</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>java</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <mainClass>PublicResults</mainClass>
-                </configuration>
             </plugin>
             <plugin>
                 <groupId>com.ragedunicorn.tools.maven</groupId>
@@ -142,8 +97,6 @@
                             <releaseNotes>ReleaseNotes.md</releaseNotes>
                             <prerelease>${github.prerelease}</prerelease>
                             <assets>
-<!--                                 <asset>owlcms/target/owlcms_setup/owlcms_setup.exe</asset> -->
-<!--                                 <asset>owlcms/target/owlcms.zip</asset> -->
                             </assets>
                         </configuration>
                     </execution>                    
@@ -151,13 +104,4 @@
             </plugin>
         </plugins>
     </build>
-
-    <dependencies>
-        <dependency>
-            <groupId>app.owlcms</groupId>
-            <artifactId>publicresults</artifactId>
-            <version>${project.version}</version>
-            <type>jar</type>
-        </dependency>
-    </dependencies>
 </project>
