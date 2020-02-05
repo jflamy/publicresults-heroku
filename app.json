@@ -4,7 +4,7 @@
   "repository": "https://github.com/jflamy/owlcms-publisher", 
   "buildpacks": [ 
     {
-      "url": "https://github.com/SriniNa/Java_pack"
+      "url": "https://github.com/heroku/heroku-buildpack-jvm-common"
     },
     {
       "url": "https://github.com/weibeld/heroku-buildpack-run"
