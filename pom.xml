@@ -8,7 +8,7 @@
     <!-- <version>4.4.2-beta2</version> -->
     <!-- </parent> -->
 
-    <name>OWLCMS Cloud Public Results Publisher</name>
+    <name>OWLCMS4 Public Results Cloud Deployment</name>
     <groupId>app.owlcms</groupId>
     <artifactId>publicresults-heroku</artifactId>
     <version>4.4.6-beta1</version>
@@ -46,6 +46,24 @@
                 </executions>
             </plugin>
             <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>tarball</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                        <configuration>
+                            <finalName>${project.artifactId}</finalName>
+                            <descriptors>
+                                <descriptor>src/main/assembly/heroku.xml</descriptor>
+                            </descriptors>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>            
+            <plugin>
                 <groupId>com.ragedunicorn.tools.maven</groupId>
                 <artifactId>github-release-maven-plugin</artifactId>
                 <version>1.0.4.2</version>
@@ -72,6 +90,7 @@
                             <releaseNotes>ReleaseNotes.md</releaseNotes>
                             <prerelease>${github.prerelease}</prerelease>
                             <assets>
+                                <asset>target/${project.artifactId}.tar.gz</asset>
                             </assets>
                         </configuration>
                     </execution>
