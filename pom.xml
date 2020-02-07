@@ -91,6 +91,8 @@
                             <prerelease>${github.prerelease}</prerelease>
                             <assets>
                                 <asset>target/${project.artifactId}.tar.gz</asset>
+                                <asset>update-${project.artifactId}.cmd</asset>
+                                <asset>update-${project.artifactId}.sh</asset>
                             </assets>
                         </configuration>
                     </execution>
