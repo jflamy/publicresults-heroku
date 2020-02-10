@@ -36,7 +36,7 @@
                             <outputDirectory>${basedir}</outputDirectory>
                             <resources>
                                 <resource>
-                                    <directory>src/main/markdown</directory>
+                                    <directory>src/main/filtered</directory>
                                     <exclude>.*</exclude>
                                     <filtering>true</filtering>
                                 </resource>
