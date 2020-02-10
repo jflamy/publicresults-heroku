@@ -17,11 +17,11 @@
     "env": {
         "OWLCMS_RELEASES": {
             "description": "URL where updates can be retrieved",
-            "value": "https://github.com/jflamy/owlcms4-heroku/releases"
+            "value": "https://github.com/jflamy-dev/owlcms4-heroku-prerelease/releases"
         },
         "OWLCMS_VERSION": {
             "description": "Version number",
-            "value": "4.4.6-beta2"
+            "value": "4.5.0-alpha1"
         },
         "OWLCMS_ARTIFACT_NAME": {
             "description": "OWLCMS module implemented",
