@@ -11,13 +11,12 @@
         }
     ],
     "addons": [
-        "heroku-postgresql:hobby-dev",
-        "papertrail"
+        "heroku-postgresql:hobby-dev"
     ],
     "env": {
         "OWLCMS_RELEASES": {
-            "description": "URL where updates can be retrieved",
-            "value": "https://github.com/${env.REPO_OWNER}/${env.H_REPO_NAME}/releases"
+            "description": "URL where updates are listed",
+            "value": "https://api.github.com/repos/${env.REPO_OWNER}/${env.H_REPO_NAME}/releases"
         },
         "OWLCMS_VERSION": {
             "description": "Version number",
