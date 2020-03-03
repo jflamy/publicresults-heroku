@@ -11,7 +11,7 @@
     <name>OWLCMS4 Public Results Cloud Deployment</name>
     <groupId>app.owlcms</groupId>
     <artifactId>publicresults-heroku</artifactId>
-    <version>4.5.2-rc6</version>
+    <version>4.5.2-rc7</version>
     <packaging>pom</packaging>
 
     <properties>
