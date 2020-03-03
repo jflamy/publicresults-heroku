@@ -16,11 +16,11 @@
     "env": {
         "OWLCMS_RELEASES": {
             "description": "URL where updates are listed",
-            "value": "https://api.github.com/repos/jflamy-dev/${env.P_REPO_NAME}/releases"
+            "value": "https://api.github.com/repos/jflamy-dev/publicresults-heroku-prerelease/releases"
         },
         "OWLCMS_VERSION": {
             "description": "Version number",
-            "value": "4.5.2-rc8"
+            "value": "4.5.2-rc9"
         },
         "OWLCMS_ARTIFACT_NAME": {
             "description": "OWLCMS module implemented",
