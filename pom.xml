@@ -2,13 +2,14 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-    <groupId>app.owlcms</groupId>
-    <artifactId>owlcms4top</artifactId>
-    <version>4.7.4.1</version>
+        <groupId>app.owlcms</groupId>
+        <artifactId>owlcms4top</artifactId>
+        <version>4.7.4.1</version>
     </parent>
 
     <name>OWLCMS4 Public Results Cloud Deployment</name>
     <artifactId>publicresults-heroku</artifactId>
+    <version>${revision}</version>
     <packaging>pom</packaging>
 
     <properties>
@@ -59,7 +60,7 @@
                         </configuration>
                     </execution>
                 </executions>
-            </plugin>            
+            </plugin>
             <plugin>
                 <groupId>com.ragedunicorn.tools.maven</groupId>
                 <artifactId>github-release-maven-plugin</artifactId>
