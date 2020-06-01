@@ -20,11 +20,7 @@
         },
         "OWLCMS_VERSION": {
             "description": "Version number",
-<<<<<<< HEAD
             "value": "4.7.5-alpha17"
-=======
-            "value": "4.7.5-beta35"
->>>>>>> branch 'develop' of https://github.com/jflamy/publicresults-heroku.git
         },
         "OWLCMS_ARTIFACT_NAME": {
             "description": "OWLCMS module implemented",
