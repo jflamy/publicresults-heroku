@@ -4,6 +4,10 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>app.owlcms</groupId>
   <artifactId>publicresults-heroku</artifactId>
+<<<<<<< HEAD
   <version>4.7.4.1</version>
+=======
+  <version>4.7.5-beta35</version>
+>>>>>>> origin/develop
   <packaging>pom</packaging>
 </project>
