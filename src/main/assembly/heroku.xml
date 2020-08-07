@@ -20,5 +20,10 @@
 			<outputDirectory>/</outputDirectory>
 			<filtered>true</filtered>
 		</file>
+        <file>
+            <source>${project.basedir}/system.properties</source>
+            <outputDirectory>/</outputDirectory>
+            <filtered>false</filtered>
+        </file>
 	</files>
 </assembly>
