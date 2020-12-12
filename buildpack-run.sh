@@ -1,2 +1,2 @@
 #!/bin/sh -x
-curl -L "https://dl.bintray.com/owlcms/owlcms-maven/app/owlcms/publicresults/4.12.0-rc01/publicresults-4.12.0-rc01.jar" -o publicresults.jar
+curl -L "https://dl.bintray.com/owlcms/owlcms-maven/app/owlcms/publicresults/4.12.0-rc02/publicresults-4.12.0-rc02.jar" -o publicresults.jar
