@@ -20,11 +20,7 @@
         },
         "OWLCMS_VERSION": {
             "description": "Version number",
-<<<<<<< HEAD
-            "value": "4.15.4"
-=======
             "value": "4.15.5-rc01"
->>>>>>> origin/develop
         },
         "OWLCMS_ARTIFACT_NAME": {
             "description": "OWLCMS module implemented",
