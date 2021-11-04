@@ -20,7 +20,7 @@
         },
         "OWLCMS_VERSION": {
             "description": "Version number",
-            "value": "4.24.0-rc05"
+            "value": "4.24.0-rc06"
         },
         "OWLCMS_ARTIFACT_NAME": {
             "description": "OWLCMS module implemented",
