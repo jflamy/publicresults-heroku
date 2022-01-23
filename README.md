@@ -1,18 +1,10 @@
-<<<<<<< HEAD
-## OWLCMS Public Results Scoreboard 4.27.3
-=======
-## OWLCMS Public Results Scoreboard 4.28.0-rc01
->>>>>>> origin/develop
+## OWLCMS Public Results Scoreboard 4.28.0
 
 This is is a cloud-oriented version of the OWLCMS results scoreboard that allows a large number of individuals (coaches, athletes, spectators) to follow a meet using their own phone or tablet no matter where they are.
 
 **To install**: click on this button.  You will be prompted to create a (free) account on the Heroku cloud if you do not have one already.  
 
-<<<<<<< HEAD
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/owlcms/publicresults-heroku/tree/4.27.3)
-=======
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/owlcms/publicresults-heroku-prerelease/tree/4.28.0-rc01)
->>>>>>> origin/develop
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/owlcms/publicresults-heroku/tree/4.28.0)
 
 **Configuration**: [Instructions](https://owlcms.github.io/owlcms4/#/Remote) for installation and how to link the competition system with the public results scoreboard are available [here](https://jflamy-dev.github.io/owlcms4-prerelease/#/Remote).
 
