@@ -1,2 +1,2 @@
 #!/bin/sh -x
-curl -L "http://maven.owlcms.mywire.org:8088/releases/app/owlcms/publicresults/4.27.3/publicresults-4.27.3.jar" -o publicresults.jar
+curl -L "http://maven.lerta.ca:8880/releases/app/owlcms/publicresults/34.2.0/publicresults-34.2.0.jar" -o publicresults.jar
