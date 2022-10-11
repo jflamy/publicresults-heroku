@@ -16,7 +16,7 @@
     "env": {
         "OWLCMS_RELEASES": {
             "description": "URL where updates are listed",
-            "value": "https://api.github.com/repos/owlcms/publicresults-heroku/releases"
+            "value": "https://api.github.com/repos/${env.REPO_OWNER}/${env.P_REPO_NAME}/releases"
         },
         "OWLCMS_VERSION": {
             "description": "Version number",
