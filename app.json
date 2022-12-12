@@ -13,11 +13,11 @@
     "env": {
         "OWLCMS_RELEASES": {
             "description": "URL where updates are listed",
-            "value": "https://api.github.com/repos/owlcms/publicresults-heroku/releases"
+            "value": "https://api.github.com/repos/owlcms/publicresults-heroku-prerelease/releases"
         },
         "OWLCMS_VERSION": {
             "description": "Version number",
-            "value": "35.0.2"
+            "value": "35.1.0-rc01"
         },
         "OWLCMS_ARTIFACT_NAME": {
             "description": "OWLCMS module implemented",
