@@ -10,9 +10,6 @@
             "url": "https://github.com/weibeld/heroku-buildpack-run"
         }
     ],
-    "addons": [
-        "heroku-postgresql:hobby-dev"
-    ],
     "env": {
         "OWLCMS_RELEASES": {
             "description": "URL where updates are listed",
@@ -20,7 +17,7 @@
         },
         "OWLCMS_VERSION": {
             "description": "Version number",
-            "value": "35.0.0-alpha11"
+            "value": "36.0.0-alpha00"
         },
         "OWLCMS_ARTIFACT_NAME": {
             "description": "OWLCMS module implemented",
