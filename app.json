@@ -17,7 +17,7 @@
         },
         "OWLCMS_VERSION": {
             "description": "Version number",
-            "value": "37.0.0-beta06"
+            "value": "37.0.0-beta07"
         },
         "OWLCMS_ARTIFACT_NAME": {
             "description": "OWLCMS module implemented",
